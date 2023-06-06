@@ -1,0 +1,8 @@
+Supreme Pizza-Classic supreme pizza-20-9.99-Tomato sauce; bell pepper; pepperoni; sausage; cheese
+Spaghetti Bolognese-Classic Italian pasta with meat sauce-20-14.99-Spaghetti;Ground beef;Tomato sauce;Parmesan cheese
+Cheeseburger-Cheese filled beef burger-30-10.99-Pepperjack cheese; beef; brioche bun; lettuce; onion; ketchup
+French Fries-Lightly salted french fries-15-5.99-salt; potato
+Alfredo-Creamy shrimp alfredo-25-13.99-shrimp; linguine; house
+Nachos-Beef nachos-14-5.5-beef; tortilla chips; cheese; salsa
+Chicken Noodle Soup-Homestyle chicken noodle soup-10-5.99-chicken breast; carrots; celery; pasta
+Apple pie-classic apple pie-5-4.5-apple; piecrust; sugar
