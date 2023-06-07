@@ -16,6 +16,10 @@ public class Order {
         this.status = Status.WAITING;
     }
 
+    public Order(int orderId) {
+        this.orderId = orderId;
+    }
+
     private void calculateTotalPrice() {
         totalPrice = 0;
         for (MenuItem item : items) {
