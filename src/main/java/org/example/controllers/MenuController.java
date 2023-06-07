@@ -2,7 +2,9 @@ package org.example.controllers;
 
 import org.example.utils.Menu;
 import org.example.models.MenuItem;
+import org.example.view.DailySalesReport;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -11,12 +13,13 @@ public class MenuController {
     private Menu menu;
     private Scanner scanner;
     private OrderManagement orderManagement;
+    private DailySalesReport salesReport;
 
     public MenuController(Menu menu) {
         this.menu = menu;
         scanner = new Scanner(System.in);
-        orderManagement = new OrderManagement();
-
+        orderManagement = new OrderManagement(null);
+        salesReport = new DailySalesReport(LocalDate.now());
     }
 
     //Adding menu item
@@ -53,7 +56,9 @@ public class MenuController {
 
         System.out.println("New menu item added successfully.");
     }
-
+    public DailySalesReport getSalesReport() {
+        return salesReport;
+    }
     public void removeMenuItem() {
         System.out.print("Enter the name of the menu item to remove: ");
         String itemName = scanner.nextLine();

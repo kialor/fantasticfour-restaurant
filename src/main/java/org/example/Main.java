@@ -8,6 +8,7 @@ import org.example.models.MenuItem;
 import org.example.models.Status;
 import org.example.models.User;
 import org.example.utils.Menu;
+import org.example.view.DailySalesReport;
 import org.example.view.MenuView;
 
 import java.nio.charset.StandardCharsets;
@@ -21,6 +22,12 @@ public class Main {
     private static final ArrayList<User> allUsers = new ArrayList<>();
     private static final InventoryManagementSystem inventorySystem = new InventoryManagementSystem(); // Instantiate here
 
+    private static void exportDailySalesReport(MenuController menuController) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter filename to export the daily sales report: ");
+        String filename = scanner.nextLine();
+        menuController.getSalesReport().exportReport(filename);
+    }
     public static void main(String[] args) {
 
         User manager = new User("Manager", "12345", "Manager");
@@ -39,7 +46,7 @@ public class Main {
         MenuController menuController = new MenuController(menu);
         Scanner scanner = new Scanner(System.in);
 
-        OrderManagement orderManagement = new OrderManagement();
+        OrderManagement orderManagement = new OrderManagement(menuController);
 
         inventorySystem.addIngredient("Potato", 7);
         inventorySystem.addIngredient("beef", 8);
@@ -67,6 +74,7 @@ public class Main {
                     System.out.println("5. Create Order");
                     System.out.println("6. Update Order Status");
                     System.out.println("7. Display Orders\n");
+                    System.out.println("8. View Sales Report");
                     System.out.println("8. Exit\n");
                     System.out.print("Enter your choice: ");
                     int choice = Integer.parseInt(scanner.nextLine());
@@ -118,6 +126,9 @@ public class Main {
                             orderManagement.displayOrders();
                             break;
                         case 8:
+                            exportDailySalesReport(menuController);
+                            break;
+                        case 9:
                             menu.saveMenuToFile("src\\main\\java\\org\\example\\menu.txt");
                             System.out.println("Exiting.");
                             break;

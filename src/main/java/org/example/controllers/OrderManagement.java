@@ -11,14 +11,19 @@ import java.util.*;
 public class OrderManagement {
     private List<Order> orders;
     private InventoryManagementSystem inventorySystem;
+    private MenuController menuController;
 
-    public OrderManagement() {
+
+    public OrderManagement(MenuController menuController) {
+        this.menuController = menuController;
         this.orders = new ArrayList<>();
         this.inventorySystem = new InventoryManagementSystem();
+
     }
 
     public void addOrder(Order order) {
         orders.add(order);
+        menuController.getSalesReport().addOrder(order);
     }
 
     public void updateOrderStatus(int orderId, Status newStatus) {
