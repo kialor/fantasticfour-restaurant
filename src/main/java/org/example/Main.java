@@ -75,7 +75,7 @@ public class Main {
                     System.out.println("6. Update Order Status");
                     System.out.println("7. Display Orders\n");
                     System.out.println("8. View Sales Report");
-                    System.out.println("8. Exit\n");
+                    System.out.println("9. Exit\n");
                     System.out.print("Enter your choice: ");
                     int choice = Integer.parseInt(scanner.nextLine());
 
