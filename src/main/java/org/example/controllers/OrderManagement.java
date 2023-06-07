@@ -1,4 +1,10 @@
-package org.example;
+package org.example.controllers;
+
+import org.example.utils.Menu;
+import org.example.view.MenuView;
+import org.example.models.Status;
+import org.example.models.MenuItem;
+import org.example.models.Order;
 
 import java.util.*;
 

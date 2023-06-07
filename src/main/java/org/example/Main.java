@@ -1,5 +1,15 @@
 package org.example;
 
+
+import org.example.controllers.InventoryManagementSystem;
+import org.example.controllers.MenuController;
+import org.example.controllers.OrderManagement;
+import org.example.models.MenuItem;
+import org.example.models.Status;
+import org.example.models.User;
+import org.example.utils.Menu;
+import org.example.view.MenuView;
+
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

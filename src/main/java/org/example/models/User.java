@@ -1,10 +1,10 @@
-package org.example;
+package org.example.models;
 
 public class User {
         String name;
 
         String role;
-        String number;
+        public String number;
         public User(String userName, String password, String role) {
             this.name = userName;
             this.number = password;

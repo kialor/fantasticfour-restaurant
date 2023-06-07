@@ -1,9 +1,9 @@
-package org.example;
+package org.example.models;
 
 import java.text.DecimalFormat;
 import java.util.List;
 
-class Order {
+public class Order {
     private int orderId;
     private List<MenuItem> items;
     private double totalPrice;

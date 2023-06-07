@@ -1,4 +1,7 @@
-package org.example;
+package org.example.controllers;
+
+import org.example.utils.Menu;
+import org.example.models.MenuItem;
 
 import java.util.Arrays;
 import java.util.List;
