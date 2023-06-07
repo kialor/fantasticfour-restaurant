@@ -13,6 +13,8 @@ public class MenuItem {
 
 
     //Constructor
+    public MenuItem() {
+    }
     public MenuItem(String itemName, String itemDescription, int prepTime, double itemPrice, List<String> itemIngredients) {
         this.itemName = itemName;
         this.itemDescription = itemDescription;
@@ -20,6 +22,8 @@ public class MenuItem {
         this.itemPrice = itemPrice;
         this.itemIngredients = itemIngredients;
     }
+
+
 
     // Second constructor
 
