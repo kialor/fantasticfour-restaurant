@@ -1,22 +1,21 @@
-package org.example.controllers;
+package org.example.restaurant;
 
 import org.example.controllers.MenuController;
 import org.example.controllers.OrderManagement;
 import org.example.models.Order;
-import org.example.models.Status;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class OrderManagementTest {
     private OrderManagement orderManagement;
     private Order existingOrder;
     private Order nonExistingOrder;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         MenuController menuController = new MenuController(null); // Create a mock MenuController
         orderManagement = new OrderManagement(menuController);
@@ -29,10 +28,10 @@ public class OrderManagementTest {
     public void testDoesOrderExist() {
         // Test for an existing order
         boolean existingOrderExists = orderManagement.doesOrderExist(existingOrder.getOrderId());
-        Assert.assertTrue(existingOrderExists);
+        Assertions.assertTrue(existingOrderExists);
 
         // Test for a non-existing order
         boolean nonExistingOrderExists = orderManagement.doesOrderExist(nonExistingOrder.getOrderId());
-        Assert.assertFalse(nonExistingOrderExists);
+        Assertions.assertFalse(nonExistingOrderExists);
     }
 }
