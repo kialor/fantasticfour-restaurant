@@ -30,7 +30,7 @@ public class DailySalesReport {
         orders.add(order);
         updateTotalRevenue(order.getTotalPrice());
         updatePopularItems(order.getItems());
-        //updateTableSales(order.getTableID(), order.getTotalPrice());
+        updateTableSales(order.getTableID(), order.getTotalPrice());
     }
 
     private void updateTotalRevenue(double amount) {
@@ -86,7 +86,7 @@ public class DailySalesReport {
         report.append("Detailed Orders:\n");
         for (Order order : orders) {
             report.append("Order ID: #").append(order.getOrderId()).append("\n");
-            report.append("Table ID: ");//.append(order.getTableID()).append("\n");
+            report.append("Table ID: ").append(order.getTableID()).append("\n");
             report.append("Items:\n");
             for (MenuItem item : order.getItems()) {
                 report.append("  - ").append(item.getItemName()).append(": ").append(item.getItemQuantity())

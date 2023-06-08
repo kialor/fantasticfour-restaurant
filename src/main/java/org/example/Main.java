@@ -8,7 +8,6 @@ import org.example.models.MenuItem;
 import org.example.models.Status;
 import org.example.models.User;
 import org.example.utils.Menu;
-import org.example.view.DailySalesReport;
 import org.example.view.MenuView;
 
 import java.nio.charset.StandardCharsets;
@@ -22,7 +21,7 @@ public class Main {
     private static final ArrayList<User> allUsers = new ArrayList<>();
     private static final InventoryManagementSystem inventorySystem = new InventoryManagementSystem(); // Instantiate here
 
-    private static void exportDailySalesReport(MenuController menuController) {
+    private static void exportDailySalesReport(MenuController menuController, int tableNumber) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter filename to export the daily sales report: ");
         String filename = scanner.nextLine();
@@ -36,6 +35,8 @@ public class Main {
         User staff = new User("Staff", "678910", "Staff");
         String hashedPassword1 = hashPassword(staff.number);
         allUsers.add(staff);
+
+        int tableNumber = 0;
 
         //MENU MANAGEMENT
         //create instance of Menu class -> creates empty menu object
@@ -96,6 +97,7 @@ public class Main {
                             break;
                         case 5:
                             orderManagement.createOrder(menu);
+
                             break;
                         case 6:
                             System.out.print("Enter the order ID: ");
@@ -126,7 +128,7 @@ public class Main {
                             orderManagement.displayOrders();
                             break;
                         case 8:
-                            exportDailySalesReport(menuController);
+                            exportDailySalesReport(menuController, tableNumber);
                             break;
                         case 9:
                             menu.saveMenuToFile("src\\main\\java\\org\\example\\menu.txt");

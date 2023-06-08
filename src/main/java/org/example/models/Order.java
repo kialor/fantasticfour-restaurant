@@ -8,12 +8,18 @@ public class Order {
     private List<MenuItem> items;
     private double totalPrice;
     private Status status;
+    private String tableID;
 
-    public Order(int orderId, List<MenuItem> items) {
+    public Order(int orderId, List<MenuItem> items, String tableID) {
         this.orderId = orderId;
         this.items = items;
         calculateTotalPrice();
         this.status = Status.WAITING;
+        this.tableID = tableID;
+    }
+
+    public String getTableID() {
+        return tableID;
     }
 
     public Order(int orderId) {

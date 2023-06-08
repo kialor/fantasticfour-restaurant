@@ -2,18 +2,18 @@
 Daily Sales Report
 Date: 2023-06-08
 -------------------------------
-Total Revenue: $5.50
+Total Revenue: $13.99
 
 Most Popular Items:
-1. Nachos: 1 orders
+1. Alfredo: 1 orders
 
 Table Sales:
-1. Table 4: $5.50
+1. Table 2: $13.99
 
 Detailed Orders:
-Order ID: #332
-Table ID: 4
+Order ID: #4255
+Table ID: 2
 Items:
-  - Nachos: 1 ($5.50)
-Total: $5.50
+  - Alfredo: 1 ($13.99)
+Total: $13.99
 
