@@ -68,6 +68,8 @@ public class OrderManagement {
         String itemName;
         int quantity;
 
+        String tableID = "";
+
         while (true) {
             System.out.print("Enter the name of the item to add (or 'done' to finish): ");
             itemName = scanner.nextLine();
@@ -87,6 +89,10 @@ public class OrderManagement {
             quantity = scanner.nextInt();
             scanner.nextLine();
 
+
+            System.out.println("Assign order to table number: ");
+            tableID = scanner.nextLine();
+
             orderItems.add(new MenuItem(item, quantity));
 
             // Update the ingredient usage in the inventory management system
@@ -96,7 +102,7 @@ public class OrderManagement {
         }
 
 
-        Order order = new Order(orderId, orderItems);
+        Order order = new Order(orderId, orderItems, tableID);
         addOrder(order);
 
         System.out.println("Order created successfully.");
