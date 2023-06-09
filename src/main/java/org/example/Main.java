@@ -76,7 +76,9 @@ public class Main {
             System.out.println("Please enter your password: ");
             String passwordinput = scanner.nextLine();
             boolean passwordMatches = verifyPassword(passwordinput, hashedPassword);
-            if (!passwordMatches) {
+            boolean passwordMatches2 = verifyPassword(passwordinput, hashedPassword1);
+            
+            if (!passwordMatches && !passwordMatches2) {
                 System.out.println("Sorry that was an incorrect username/password combination");
             } else {
                 while ((usernameinput.equals("Manager") && passwordMatches)) {
@@ -90,7 +92,7 @@ public class Main {
                     System.out.println(CYAN_BOLD+"Order Options"+RESET);
                     System.out.println("5. Create Order");
                     System.out.println("6. Update Order Status");
-                    System.out.println("7. Display Orders\n");
+                    System.out.println("7. Display Orders");
                     System.out.println("8. View Sales Report\n");
                     System.out.println(GREEN_BOLD+"Table Options"+RESET);
                     System.out.println("9. All Table's Status");
@@ -197,9 +199,7 @@ public class Main {
                     }
                 }
             }
-
-                boolean passwordMatches2 = verifyPassword(passwordinput, hashedPassword1);
-            if (!passwordMatches2) {
+            if (!passwordMatches2 && !passwordMatches) {
                 System.out.println("Sorry that was an incorrect username/password combination");
             } else {
                 while (usernameinput.equals("Staff") && passwordMatches2) {
