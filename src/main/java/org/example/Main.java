@@ -133,14 +133,18 @@ public class Main {
                                     System.out.println(status.ordinal() + ". " + status);
                                 }
 
-                                System.out.print("Enter the new status: ");
-                                String statusInput = scanner.nextLine();
+                                boolean validStatus = false;
+                                while(!validStatus) {
+                                    System.out.print("Enter the new status: ");
+                                    String statusInput = scanner.nextLine();
 
-                                Status newStatus = Status.valueOf(statusInput.toUpperCase());
-                                if (newStatus != null) {
-                                    orderManagement.updateOrderStatus(orderId, newStatus);
-                                } else {
-                                    System.out.println("Invalid status. Please try again.");
+                                    try {
+                                        Status newStatus = Status.valueOf(statusInput.toUpperCase());
+                                        orderManagement.updateOrderStatus(orderId, newStatus);
+                                        validStatus = true;
+                                    } catch (IllegalArgumentException e) {
+                                        System.out.println("Invalid status. Please try again.");
+                                    }
                                 }
                             } else {
                                 System.out.println("Invalid order number.");
