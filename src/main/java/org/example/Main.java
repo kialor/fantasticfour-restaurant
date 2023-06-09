@@ -78,8 +78,10 @@ public class Main {
             boolean passwordMatches = verifyPassword(passwordinput, hashedPassword);
             boolean passwordMatches2 = verifyPassword(passwordinput, hashedPassword1);
             
-            if (!passwordMatches && !passwordMatches2) {
-                System.out.println("Sorry that was an incorrect username/password combination");
+            if ((!(usernameinput.equals("Manager")) || !passwordMatches)) {
+                if (((!usernameinput.equals("Staff")) || (!passwordMatches2))) {
+                    System.out.println("Sorry that was an incorrect username/password combination");
+                }
             } else {
                 while ((usernameinput.equals("Manager") && passwordMatches)) {
                     System.out.println("Welcome Manager!");
@@ -203,9 +205,7 @@ public class Main {
                     }
                 }
             }
-            if (!passwordMatches2 && !passwordMatches) {
-                System.out.println("Sorry that was an incorrect username/password combination");
-            } else {
+           
                 while (usernameinput.equals("Staff") && passwordMatches2) {
                     System.out.println("Welcome Staff!");
                     System.out.println("Restaurant Management System\n");
@@ -321,9 +321,7 @@ public class Main {
                 }
             }
         }
-    }
-
-
+    
         public static String hashPassword (String password){
             try {
                 MessageDigest digest = MessageDigest.getInstance("SHA-256");
