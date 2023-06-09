@@ -44,7 +44,7 @@ public class MenuController {
         //"," used as the delimiter and stores the substrings in array
         //converts ingredientsArray into List<String>
 
-        System.out.print("Ingredients (comma-separated): ");
+        System.out.print("Ingredients: ");
         String ingredientsString = scanner.nextLine();
         String[] ingredientsArray = ingredientsString.split(",");
         List<String> ingredients = Arrays.asList(ingredientsArray);
@@ -54,7 +54,7 @@ public class MenuController {
         menu.addItem(newItem);
         menu.saveMenuToFile("src\\main\\java\\org\\example\\menu.txt");
 
-        System.out.println("New menu item added successfully.");
+        System.out.println("New menu item added successfully.\n");
     }
     public DailySalesReport getSalesReport() {
         return salesReport;
@@ -123,7 +123,7 @@ public class MenuController {
             itemToEdit.setItemPrice(newitemPrice);
             scanner.nextLine();
 
-            System.out.print("New Ingredients (comma-separated): ");
+            System.out.print("New Ingredients: ");
             String newingredientsString = scanner.nextLine();
             String[] newingredientsArray = newingredientsString.split(",");
             List<String> newingredients = Arrays.asList(newingredientsArray);

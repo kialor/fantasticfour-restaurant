@@ -9,6 +9,9 @@ import org.example.models.Order;
 import java.util.*;
 
 public class OrderManagement {
+
+    public static final String RESET = "\033[0m";
+    public static final String YELLOW_UNDERLINED = "\033[4;33m";
     private List<Order> orders;
     private InventoryManagementSystem inventorySystem;
     private MenuController menuController;
@@ -122,7 +125,7 @@ public class OrderManagement {
             System.out.println();
             System.out.println("--Orders--\n");
             for (Order order : orders) {
-                System.out.println("Order ID: " + order.getOrderId());
+                System.out.println("Order ID: " + YELLOW_UNDERLINED+order.getOrderId()+RESET);
                 System.out.println("Items Ordered:");
                 for (MenuItem item : order.getItems()) {
                     System.out.println("- Item: " + item.getItemName());
