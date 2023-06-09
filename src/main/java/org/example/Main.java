@@ -19,6 +19,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    public static final String RESET = "\033[0m";
+    public static final String GREEN_BOLD = "\033[1;32m";
+    public static final String PURPLE_BOLD = "\033[1;35m";
+    public static final String CYAN_BOLD = "\033[1;36m";
     private static final ArrayList<User> allUsers = new ArrayList<>();
     private static final InventoryManagementSystem inventorySystem = new InventoryManagementSystem(); // Instantiate here
     private static final ArrayList<Tables> allTables = new ArrayList<>();
@@ -78,20 +82,20 @@ public class Main {
                 while ((usernameinput.equals("Manager") && passwordMatches)) {
                     System.out.println("Welcome Manager!");
                     System.out.println("Restaurant Management System\n");
-                    System.out.println("Menu Options");
+                    System.out.println(PURPLE_BOLD+"Menu Options"+RESET);
                     System.out.println("1. View Menu");
                     System.out.println("2. Add Item");
                     System.out.println("3. Remove Item");
                     System.out.println("4. Edit Item\n");
-                    System.out.println("Order Options");
+                    System.out.println(CYAN_BOLD+"Order Options"+RESET);
                     System.out.println("5. Create Order");
                     System.out.println("6. Update Order Status");
                     System.out.println("7. Display Orders\n");
-                    System.out.println("8. View Sales Report");
-                    System.out.println("Table Options");
+                    System.out.println("8. View Sales Report\n");
+                    System.out.println(GREEN_BOLD+"Table Options"+RESET);
                     System.out.println("9. All Table's Status");
                     System.out.println("10. Assign Table To Customer");
-                    System.out.println("11. Clear Table");
+                    System.out.println("11. Clear Table\n");
                     System.out.println("12. Exit\n");
                     System.out.print("Enter your choice: ");
                     int choice = Integer.parseInt(scanner.nextLine());
@@ -201,19 +205,19 @@ public class Main {
                 while (usernameinput.equals("Staff") && passwordMatches2) {
                     System.out.println("Welcome Staff!");
                     System.out.println("Restaurant Management System\n");
-                    System.out.println("Menu Options");
+                    System.out.println(PURPLE_BOLD+"Menu Options"+RESET);
                     System.out.println("1. View Menu");
                     System.out.println("2. Add Item");
                     System.out.println("3. Remove Item");
                     System.out.println("4. Edit Item\n");
-                    System.out.println("Order Options");
+                    System.out.println(CYAN_BOLD+"Order Options"+RESET);
                     System.out.println("5. Create Order");
                     System.out.println("6. Update Order Status");
                     System.out.println("7. Display Orders\n");
-                    System.out.println("Table Options");
+                    System.out.println(GREEN_BOLD+"Table Options"+RESET);
                     System.out.println("8. All Table's Status");
                     System.out.println("9. Assign Table To Customer");
-                    System.out.println("10. Clear Table");
+                    System.out.println("10. Clear Table\n");
                     System.out.println("11. Exit\n");
                     System.out.print("Enter your choice: ");
                     int choice2 = Integer.parseInt(scanner.nextLine());

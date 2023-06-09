@@ -2,18 +2,22 @@
 Daily Sales Report
 Date: 2023-06-08
 -------------------------------
-Total Revenue: $5.50
+Total Revenue: $80.39
 
 Most Popular Items:
-1. Nachos: 1 orders
+1. Chicken Noodle Soup: 11 orders
+2. Apple pie: 2 orders
+3. Nachos: 1 orders
 
 Table Sales:
-1. Table 4: $5.50
+1. Table 2: $80.39
 
 Detailed Orders:
-Order ID: #332
-Table ID: 4
+Order ID: #3194
+Table ID: 2
 Items:
   - Nachos: 1 ($5.50)
-Total: $5.50
+  - Apple pie: 2 ($4.50)
+  - Chicken Noodle Soup: 11 ($5.99)
+Total: $80.39
 
