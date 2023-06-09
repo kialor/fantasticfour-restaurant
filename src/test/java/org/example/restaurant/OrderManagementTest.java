@@ -19,8 +19,8 @@ public class OrderManagementTest {
     public void setUp() {
         MenuController menuController = new MenuController(null); // Create a mock MenuController
         orderManagement = new OrderManagement(menuController);
-        existingOrder = new Order(1, new ArrayList<>());
-        nonExistingOrder = new Order(2, new ArrayList<>());
+        existingOrder = new Order(1, new ArrayList<>(), "2");
+        nonExistingOrder = new Order(2, new ArrayList<>(), "3");
         orderManagement.addOrder(existingOrder);
     }
 
